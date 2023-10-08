@@ -10,7 +10,9 @@ public class MyString {
      * @param replace String to replace character with.
      * @return New string with replacements.
      */
-    public static String replaceAll(final String original, final char characterToBeFound, final String replace) {
+    public static String replaceAll(final String original,
+                                    final char characterToBeFound,
+                                    final String replace) {
         String newString = "";
         for (int i = 0; i < original.length(); i++) {
             char character = original.charAt(i);

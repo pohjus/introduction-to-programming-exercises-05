@@ -33,7 +33,8 @@ public class Main {
      * @param includeWhiteSpaces Flag to include or ignore white spaces.
      * @return True if the string is a palindrome, false otherwise.
      */
-    public static boolean isPalindrome(final String original, final boolean includeWhiteSpaces) {
+    public static boolean isPalindrome(final String original,
+                                       final boolean includeWhiteSpaces) {
         String modifiedOriginal = original;
         if (!includeWhiteSpaces) {
             modifiedOriginal = "";

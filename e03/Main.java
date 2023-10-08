@@ -22,7 +22,7 @@ public class Main {
      * Prints the input name to the console.
      * @param nimi the name to print
      */
-    public static void tulostaJokinNimi(String nimi) {
+    public static void tulostaJokinNimi(final String nimi) {
         System.out.println(nimi);
     }
 }

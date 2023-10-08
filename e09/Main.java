@@ -3,10 +3,22 @@
  *
  * @author Jussi Pohjolainen
  */
+@SuppressWarnings("checkstyle:VisibilityModifier")
 public class Main {
-    static int a;
-    static int b;
-    static int summa;
+    /**
+     * Variable can be used in all methods.
+     */
+    public static int a;
+
+    /**
+     * Variable can be used in all methods.
+     */
+    public static int b;
+
+    /**
+     * Variable can be used in all methods.
+     */
+    public static int summa;
 
     /**
      * Entry point of the program.
@@ -23,14 +35,16 @@ public class Main {
      * Sets value of a.
      */
     public static void asetaA() {
-        a = 5;
+        final int sumVariable = 5;
+        a = sumVariable;
     }
 
     /**
      * Sets value of b.
      */
     public static void asetaB() {
-        b = 5;
+        final int sumVariable = 5;
+        b = sumVariable;
     }
 
     /**

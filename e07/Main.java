@@ -10,7 +10,8 @@ public class Main {
      * @param args Command line arguments
      */
     public static void main(final String[] args) {
-        System.out.println(generateString(4, 'x'));
+        final int amountOfChars = 4;
+        System.out.println(generateString(amountOfChars, 'x'));
     }
 
     /**
@@ -19,9 +20,10 @@ public class Main {
      * @param character the character to repeat
      * @return generated string
      */
-    public static String generateString(int amount, char character) {
+    public static String generateString(final int amount,
+                                        final char character) {
         String returnValue = "";
-        for(int i = 0; i < amount; i++) {
+        for (int i = 0; i < amount; i++) {
             returnValue += character;
         }
         return returnValue;

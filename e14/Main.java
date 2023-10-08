@@ -41,13 +41,19 @@ public class Main {
     public static void main(final String[] args) {
         Console console = System.console();
 
+
+        final int sizeOfTheBoard = 10;
+
         // Generate board with bombs
-        String[] board = generateBoard(10);
+        String[] board = generateBoard(sizeOfTheBoard);
 
         // Initial board display
         printBoard(board, false, false);
 
-        int place = getUserInput("Anna pelaajan paikka: ", 0, board.length - 1, console);
+        int place = getUserInput("Anna pelaajan paikka: ",
+                                 0,
+                                 board.length - 1,
+                                 console);
 
         // Place the player
         if (EMPTY.equals(board[place])) {
@@ -71,14 +77,18 @@ public class Main {
     }
 
     /**
-     * Get and validate user input
+     * Get and validate user input.
+     *
      * @param prompt Prompt to show the user.
      * @param min Minimum acceptable value.
      * @param max Maximum acceptable value.
      * @param console Console for user input.
      * @return Validated user input.
      */
-    public static int getUserInput(String prompt, int min, int max, Console console) {
+    public static int getUserInput(final String prompt,
+                                   final int min,
+                                   final int max,
+                                   final Console console) {
         int place = -1;
         boolean valid = false;
         while (!valid) {
@@ -104,7 +114,9 @@ public class Main {
      * @param showPlayer Whether to show the player's position.
      * @param showBombs Whether to show the bomb positions.
      */
-    public static void printBoard(final String[] board, final boolean showPlayer, final boolean showBombs) {
+    public static void printBoard(final String[] board,
+                                  final boolean showPlayer,
+                                  final boolean showBombs) {
         for (String s : board) {
             if (showPlayer && showBombs) {
                 System.out.print(s);
@@ -127,7 +139,9 @@ public class Main {
         for (int i = 0; i < board.length; i++) {
             board[i] = EMPTY;
         }
-        int numberOfBombs = size / 3;
+        final int percentageOfBombs = 3;
+
+        int numberOfBombs = size / percentageOfBombs;
         int placedBombs = 0;
 
         while (placedBombs < numberOfBombs) {

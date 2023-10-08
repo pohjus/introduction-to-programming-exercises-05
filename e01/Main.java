@@ -14,7 +14,7 @@ public class Main {
     }
 
     /**
-     * Method that outputs a name "Jussi"
+     * Method that outputs a name "Jussi".
      */
     public static void tulostaNimi() {
         System.out.println("Jussi");

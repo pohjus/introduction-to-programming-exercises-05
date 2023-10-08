@@ -16,7 +16,7 @@ public class Main {
         String input = console.readLine();
         int height = Integer.parseInt(input);
 
-        for(int i = 0; i < height; i++) {
+        for (int i = 0; i < height; i++) {
             System.out.println(generateString(height, 'X'));
         }
     }
@@ -27,9 +27,10 @@ public class Main {
      * @param character the character to repeat
      * @return generated string
      */
-    public static String generateString(int amount, char character) {
+    public static String generateString(final int amount,
+                                        final char character) {
         String returnValue = "";
-        for(int i = 0; i < amount; i++) {
+        for (int i = 0; i < amount; i++) {
             returnValue += character;
         }
         return returnValue;
