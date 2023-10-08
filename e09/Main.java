@@ -3,7 +3,7 @@
  *
  * @author Jussi Pohjolainen
  */
-@SuppressWarnings("checkstyle:VisibilityModifier")
+@SuppressWarnings("checkstyle:VisibilityModifier")  // note update sun_checks.xml!
 public class Main {
     /**
      * Variable can be used in all methods.
